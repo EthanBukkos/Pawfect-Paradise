@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Story</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="story1.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Community Stories</h1>
+    <hr>
+    <div class="content">
+        <div class="text-body">
+            <p>I can hardly contain my excitement as I share that I just adopted the most amazing dog from Pawfect paradise! 
+            🐾❤️ After weeks of searching and countless hours spent browsing profiles, I finally found my perfect match—meet Boba, a playful 2-year-old Labrador mix!
+			From the moment I met her, I knew she was meant to be a part of my family. Her wagging tail and soulful eyes melted my heart instantly. 🥰 We spent some time
+			getting to know each other at the shelter, and it was clear that we had an instant connection.
+			Disney has already settled in beautifully at home. She loves her new toys, exploring the backyard, and snuggling up on the couch for movie nights. 🎬🐶 
+			I can’t believe how much joy she has brought into my life in such a short time!
+			I encourage anyone considering adoption to take the leap! There are so many wonderful animals waiting for their forever homes. 
+			Thank you to Pawfect Paradise for making this possible and for all the incredible work you do to help animals in need! 🏡💕</p>
+			Here’s to many adventures ahead with my new best friend! 🥳🐕✨ </p>
+        </div>
+        <div class="image">
+            <img src="photos/boba.jpeg" alt="Puppy Image">
+        </div>
+    </div>
+
+    <!-- Button and Comments Dropdown -->
+    <div class="comments-container">
+        <button class="show-comments-btn" onclick="toggleComments()">Click to Show Comments</button>
+        <div class="comments-section" id="commentsSection">
+            <label for="comments">Comments</label>
+            <select id="comments">
+                <option>Comment 1</option>
+                <option>Comment 2</option>
+                <option>Comment 3</option>
+            </select>
+            <input type="text" placeholder="Add Comment">
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <a href="#contact">Contact Us</a>
+    <a href="#about">About Us</a>
+</footer>
+
+<script>
+    function toggleComments() {
+        const commentsSection = document.getElementById('commentsSection');
+        if (commentsSection.style.display === 'none' || commentsSection.style.display === '') {
+            commentsSection.style.display = 'block';
+        } else {
+            commentsSection.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

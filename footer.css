@@ -1,0 +1,26 @@
+footer {
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgba(147,112,219, 0.7);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.2em;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* footer anchor styles */
+footer a {
+    /* color: #aaa; */
+    color: white;
+	text-decoration: none;
+	margin: 0 20px;
+}
+
+footer a:hover {
+		color: orange;
+}
+
+#copyright_text {
+    font-size: var(--fs-xs);
+}

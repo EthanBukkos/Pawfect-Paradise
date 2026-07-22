@@ -1,0 +1,16 @@
+/* Code written by Ethan Bukkos */
+
+:root {
+    --fs-xs: 0.75rem; /* for copyright print*/
+    --fs-sm: 0.875rem; /* for labels */
+    --fs-base: 1rem; /* body text */
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem; /* subheadings */
+    --fs-xl: 1.5rem; /* headings */
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
+}
+
+html {
+    font-size: 100%;
+}

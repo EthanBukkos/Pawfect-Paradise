@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt today!</title>
+    <link rel="stylesheet" href="global.css">
+    <link href="online_form.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link href="header.css" rel="stylesheet">
+</head>
+<script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const imgSrc = params.get("img");
+
+      if (imgSrc) {
+        const imgElement = document.createElement("img");
+        imgElement.src = imgSrc;
+        imgElement.alt = "Selected Animal";
+        imgElement.style.maxWidth = "200px";
+
+        const container = document.getElementById("animal-image");
+        container.appendChild(imgElement);
+      }
+    };
+  </script>
+<body>
+    <header>
+        <h1>Adopt today!</h1>
+        <a href="index.html">Home</a></li>
+    </header>
+    <main>
+        <section class="form-container">
+            <h1>Adoption Application</h1>
+            <div id="animal-image">
+                <!-- Animal image will be dynamically added here -->
+            </div>
+            <p class="form-intro">Please fill out the form below:</p>
+
+        <form id="adoption">
+            <div class="form-group">
+                <label for="name"> First & Last Name:<span class="required">*</span> </label>
+                <input type="text" id="name" name="name" placeholder="First & Last name" required>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="phone"> Phone Number:* </label>
+                <input type="tel" id="phone" name="phone" placeholder="(xxx)-xxx-xxxx" required minlength="10">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="email"> Email:* </label>
+                <input type="email" id="email" name="email" placeholder="email@email.com" required>
+            </div>
+
+
+            <div class="form-actions">
+                <button type="reset" class="btn reset-btn ">Reset</button>
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+
+        </form>
+        </section>
+    </main>
+    <footer>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="about_us.html">About Us</a>
+        <p id="copyright_text">&copy; <span id="year"></span> Pawfect Paradise. All rights reserved.</p>
+    </footer>
+     <script src="javascript/copyright_year.js"></script>
+</body>
+
+</html>

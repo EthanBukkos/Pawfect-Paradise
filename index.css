@@ -1,0 +1,184 @@
+/* Code written by Ethan Bukkos */
+
+/* body styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        "text-body text-body video"
+        "timer timer video"
+        "timer timer photos"
+        "footer footer footer";
+    grid-gap: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background-image: url("photos/background_lessOpacity.jpg");
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* grid-layout styles */
+
+.wrapper {
+    grid-area: text-body;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 1em;
+}
+
+.wrapper p {
+    background-color: rgba(0147,112,219, 0.5);
+    border-style: outset;
+    border-color: rgba(0147,112,219, 0.5);
+    min-width: 7em;
+    border-radius: 15px;
+}
+
+
+.video {
+    grid-area: video;
+    padding: 1.5rem;
+    margin: auto;
+}
+.video video {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.photos {
+    grid-area: photos;
+    padding: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: auto;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer #citations {
+    padding-top: 1em;
+}
+
+footer #copyright_text {
+    margin-top: 0.5em;
+}
+
+/* header styles */
+header h1 {
+    color: white;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+/* navigation list styles */
+#navList {
+    list-style-type: none;
+}
+
+#navList li {
+    display: inline-block;
+    width: 20%;
+}
+
+#navList a {
+    text-decoration: none;
+    color: white;
+}
+
+#navList a:visited {
+    color: white;  
+}
+
+#navList a:hover {
+    color: orange;
+}
+
+#navList a:active {
+    color: black;
+}
+
+/* photo styles */
+#photo1, #photo2 {
+    max-width: 300px;
+    width: 80%;
+    height: auto;
+    /* opacity: 0.8; */
+}
+
+img.enlarged {
+    transform: scale(2);
+}
+
+/* adopt dropdown list styles */
+#dropdown_list {
+    position: relative;
+
+}
+
+#dropdown_list_content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* left and tranform rule ensure the menu is directly below 'Adopt' */
+    transform: translateX(-50%); 
+    left: 50%;
+    background-color: orange;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    text-align: left;
+}
+
+#dropdown_list_content li {
+    padding: 10px 20px;
+    cursor: pointer; /* cursor becomes a pointer when it hovers over item */
+    width: 100%; /* set to 100% so the hover rule highlights the whole word */
+    box-sizing: border-box; /* this prevents the hover highlight from extending beyond the dropdown menu */
+}
+
+#dropdown_list_content li:hover {
+    background-color: rgb(234, 239, 44, 0.6);
+}
+
+/* countdown timer styles */
+#countdown_timer {
+    grid-area: timer;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    background-color: hsla(62, 86%, 55%, 0.6);
+    border-style: outset;
+    border-radius: 10px;
+    /* margin: auto; */
+    height: fit-content;
+}
+
+#countdown_timer p {
+    font-size: 1.6em;
+    margin-bottom: 0.7rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+#citations li{
+    font-size: 0.9rem;
+}

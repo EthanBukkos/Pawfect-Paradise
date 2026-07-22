@@ -1,0 +1,148 @@
+/* Code written by Ethan Bukkos T00230826 */
+
+/* body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2rem;
+    grid-template-areas: 
+        "header header header header header header"
+        "filters animal_col1 animal_col2 animal_col3 animal_col4 animal_col5"
+        "filters animal_col1 animal_col2 animal_col3 animal_col4 animal_col5"
+        "footer footer footer footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background-image: url("photos/background_lessOpacity.jpg");
+}
+
+/* grid-layout styles */
+
+footer {
+    grid-area: footer;
+    
+}
+
+    /* header styles*/
+
+header {
+    grid-area: header;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:active {
+    color: white;
+}
+
+header a:visited {
+    color: white;
+}
+
+header a:hover {
+    color: orange;
+}
+
+#filters {
+    padding-left: 1.5em;
+    grid-area: filters;
+}
+
+#animal_col1 {
+    grid-area: animal_col1;
+}
+
+#animal_col2 {
+    grid-area: animal_col2;
+}
+
+#animal_col3 {
+    grid-area: animal_col3;
+}
+
+#animal_col4 {
+    grid-area: animal_col4;
+    margin-top: 1em;
+}
+
+#animal_col5 {
+    grid-area: animal_col5;
+    margin-top: 1em;
+}
+
+/* image styles */
+img {
+    width: 150px;
+    height: 150px;
+}
+
+/* colulmn section styles */
+section[id^="animal_col"] {
+    align-items: center;
+}
+
+section[id^="animal_col"] div {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* filtered species styles */
+#filtered_animals {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#filterted_animals div {
+    text-align: center;
+}
+
+/* checkbox styles */
+#dogs {
+    width: 30px;
+    height: 30px;
+}
+
+#cats {
+    width: 30px;
+    height: 30px;
+}
+
+#birds {
+    width: 30px;
+    height: 30px;
+}
+
+#rabbits {
+    width: 30px;
+    height: 30px;
+}
+
+#rodents {
+    width: 30px;
+    height: 30px;
+}
+
+#other {
+    width: 30px;
+    height: 30px;
+}
+
+/* citation styles */
+#citations li {
+    font-size: 0.6rem;
+}
